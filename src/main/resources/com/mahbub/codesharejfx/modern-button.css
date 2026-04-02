@@ -1,0 +1,25 @@
+
+.modern-button {
+    -fx-background-color: linear-gradient(to bottom right, #2b5876, #4e4376);
+    -fx-background-radius: 25;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Verdana";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 25 10 25;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+}
+
+
+.modern-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #3a7bd5, #00d2ff);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,210,255,0.4), 15, 0, 0, 0);
+    -fx-translate-y: -1px;
+}
+
+
+.modern-button:armed {
+    -fx-background-color: #2b5876;
+    -fx-translate-y: 1px;
+}

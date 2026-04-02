@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" styleClass="main-anchor" stylesheets="@modern-style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbub.codesharejfx.HelloController">
+   <children>
+
+      <Pane fx:id="animationPane" mouseTransparent="true" prefHeight="500.0" prefWidth="500.0" />
+
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="500.0" spacing="30.0" styleClass="main-container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+         <children>
+            <VBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Text fill="#cccccc" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO">
+                     <font>
+                        <Font name="Monospaced Regular" size="14.0" />
+                     </font>
+                  </Text>
+
+                  <Label fx:id="mainTitle" alignment="CENTER" styleClass="glitch-text" text="CodeShare">
+                     <font>
+                        <Font name="System Bold" size="64.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.0" startY="0.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.0" green="1.0" blue="0.75" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6" green="0.2" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </VBox>
+
+            <Button mnemonicParsing="false" onAction="#GotToUserPanel" styleClass="modern-button" stylesheets="@modern-button.css" text="Access User Panel" />
+
+            <Text fill="#777777" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by &lt;/Md Mahbub Tanmay&gt;">
+               <font>
+                  <Font name="Monospaced Regular" size="11.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

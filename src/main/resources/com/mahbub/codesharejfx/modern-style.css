@@ -1,0 +1,103 @@
+
+.root {
+    -bg-dark: #0f172a;
+    -bg-lighter: #1e293b;
+    -accent-blue: #38bdf8;
+    -accent-green: #4ade80;
+    -text-main: #f8fafc;
+    -text-muted: #94a3b8;
+}
+
+.main-container {
+    -fx-background-color: -bg-dark;
+}
+
+.sidebar {
+    -fx-background-color: -bg-lighter;
+    -fx-border-color: transparent #334155 transparent transparent;
+}
+
+.logo-text {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -accent-blue;
+    -fx-padding: 0 0 20 0;
+}
+
+.section-header {
+    -fx-fill: -text-muted;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+
+.card {
+    -fx-background-color: #33415544;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+}
+
+.modern-input {
+    -fx-background-color: -bg-dark;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #475569;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+}
+
+.modern-input:focused {
+    -fx-border-color: -accent-blue;
+}
+
+
+.modern-codebox {
+    -fx-control-inner-background: #1e1e1e;
+    -fx-font-family: "Consolas", "monospace";
+    -fx-font-size: 14px;
+    -fx-text-fill: #dcdcdc;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #334155;
+    -fx-text-fill: white;
+}
+
+.modern-codebox .content {
+    -fx-background-color: #1e1e1e;
+}
+
+
+.primary-button {
+    -fx-background-color: -accent-blue;
+    -fx-text-fill: -bg-dark;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.secondary-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -accent-blue;
+    -fx-border-color: -accent-blue;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.action-button {
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+    -fx-padding: 12;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.action-button:hover {
+    -fx-background-color: #475569;
+}
+
+.compile-button {
+    -fx-background-color: -accent-green;
+    -fx-text-fill: -bg-dark;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 5 20;
+}

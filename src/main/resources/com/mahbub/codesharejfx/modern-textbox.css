@@ -1,0 +1,10 @@
+
+.modern-textbox {
+    -fx-border-radius: 25;
+    -fx-border-color: #1f9dff;
+    -fx-background-color: rgba(255, 0, 0, 0);
+    -fx-font-family: "Segoe UI", "Verdana";
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+}
