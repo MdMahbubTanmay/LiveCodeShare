@@ -46,9 +46,6 @@
     -fx-padding: 8;
 }
 
-.modern-input:focused {
-    -fx-border-color: -accent-blue;
-}
 
 
 .modern-codebox {
@@ -62,9 +59,7 @@
     -fx-text-fill: white;
 }
 
-.modern-codebox .content {
-    -fx-background-color: #1e1e1e;
-}
+
 
 
 .primary-button {

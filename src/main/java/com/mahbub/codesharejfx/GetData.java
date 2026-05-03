@@ -24,21 +24,21 @@ public class GetData {
     public static void getCode() throws Exception {
         Firestore db = FirebaseInitializer.getFirestore();
         
-        // Pointing to sourceUID instead of MID to fetch the specific user's code
+
         DocumentReference docRef = db.collection("Rooms").document(UserPanelController.getCurrentMachineID());
         
         ApiFuture<DocumentSnapshot> future = docRef.get();
         DocumentSnapshot document = future.get(); 
 
         if (document.exists()) {
-            // Check if the "Code" field actually exists in that document
+
             isExist = true;
             String fetchedCode = document.getString("Code");
-            Code = (fetchedCode != null) ? fetchedCode : "// No code found in this document";
+            Code = (fetchedCode != null) ? fetchedCode : " No code found in this document";
             isLocked = document.getString("isLocked");
         } else {
             isExist = false;
-            Code = "// Error: Invalid Room!";
+            Code = " Error: Invalid Room!";
         }
     }
 }

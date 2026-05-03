@@ -37,7 +37,7 @@ public class FirebaseInitializer {
             FirebaseApp.initializeApp(options);
 
 
-            db = FirestoreClient.getFirestore(); // ✅ Correct way to get Firestore after Firebase initialization
+            db = FirestoreClient.getFirestore();
 
 
 

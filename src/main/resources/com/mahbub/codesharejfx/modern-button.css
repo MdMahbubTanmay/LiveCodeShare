@@ -19,7 +19,3 @@
 }
 
 
-.modern-button:armed {
-    -fx-background-color: #2b5876;
-    -fx-translate-y: 1px;
-}
