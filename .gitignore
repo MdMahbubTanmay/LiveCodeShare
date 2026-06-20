@@ -1,6 +1,8 @@
 #Mahbub
 CodeShare_Release/
 CodeShare_Release.zip
+serviceAccountKey.json
+
 
 
 
@@ -45,7 +47,5 @@ build/
 ### Mac OS ###
 .DS_Store
 
-### Mahbub ###
-CodeShare_Windows/
-serviceAccountKey.json
-CodeShare_Windows.zip
+
+
