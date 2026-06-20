@@ -1,3 +1,10 @@
+#Mahbub
+CodeShare_Release/
+CodeShare_Release.zip
+
+
+
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
