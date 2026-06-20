@@ -1,11 +1,23 @@
+# New Update Is Live
+
+
+## Whats New:
+* Added Chatting Feature
+* Admin Can clear all chat History
+* Members can chat with each other
+* Changed UI Design
+
+[Download Now](https://github.com/MdMahbubTanmay/LiveCodeShare/releases/tag/Version-3)
+
 # LiveCodeShare
 
 A real-time collaborative code editor built with **JavaFX** and **Firebase**. This tool allows developers to share and edit code snippets simultaneously, providing a synchronized environment for pair programming and remote collaboration.
 
-## Screenshots
-* **Userpanel**
 
-![UserPanel Screenshots](https://i.postimg.cc/W1gqJKnT/Screenshot-from-2026-05-02-20-35-58.png)
+## Screenshots
+* **Userpanel (After Update)**
+
+![UserPanel Screenshots](https://i.postimg.cc/3w1BGttZ/Screenshot-from-2026-06-20-23-17-55.png)
 
 * **Code Exec Terminal**
 

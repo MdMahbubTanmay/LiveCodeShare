@@ -27,7 +27,7 @@ public class CompileCode {
             fileName = "C:\\Users\\Public\\Documents\\c_code.c";
             execName = "C:\\Users\\Public\\Documents\\c_code_exec.exe";
         } else {
-            // Ubuntu Public folder
+
             fileName = home + "/Public/c_code.c";
             execName = home + "/Public/c_code_exec";
         }
@@ -75,7 +75,7 @@ public class CompileCode {
             fileName = "C:\\Users\\Public\\Documents\\cpp_code.cpp";
             execName = "C:\\Users\\Public\\Documents\\cpp_code_exec.exe";
         } else {
-            // Ubuntu Public folder
+
             fileName = home + "/Public/cpp_code.cpp";
             execName = home + "/Public/cpp_code_exec";
         }

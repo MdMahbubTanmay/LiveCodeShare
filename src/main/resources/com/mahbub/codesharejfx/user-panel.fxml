@@ -6,60 +6,134 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox prefHeight="800.0" prefWidth="1000.0" styleClass="main-container" stylesheets="@modern-style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbub.codesharejfx.UserPanelController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" styleClass="main-anchor" stylesheets="@modern-style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbub.codesharejfx.UserPanelController">
    <children>
-      <VBox prefHeight="800.0" prefWidth="419.0" spacing="20.0" styleClass="sidebar">
+      <HBox prefHeight="800.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label styleClass="logo-text" text="CODE SHARE" />
 
-            <VBox spacing="10.0" styleClass="card">
-               <Text styleClass="section-header" text="My Status" />
-               <HBox alignment="CENTER_LEFT" spacing="10">
-                  <Circle fx:id="activeStatus" fill="RED" radius="5" />
-                  <Text fx:id="CurrentlyJoinedRoom" fill="WHITE" styleClass="status-text" text="Joined Room : None" />
-               </HBox>
-            </VBox>
 
-            <VBox spacing="10.0" styleClass="card">
-               <Label styleClass="section-header" text="Room Management" textFill="#17b9b9" />
-               <TextField fx:id="myRoomID" promptText="Your Room ID" styleClass="modern-input" />
-               <Button maxWidth="Infinity" onAction="#CreateMyOwnRoom" styleClass="primary-button" text="Create Room" />
-
-               <Separator styleClass="modern-separator" />
-
-               <TextField fx:id="joinRoomBox" promptText="Enter ID to Join" styleClass="modern-input" />
-               <Button maxWidth="Infinity" onAction="#JoinRoom" styleClass="secondary-button" text="Join Room" />
-            </VBox>
-
-            <Region VBox.vgrow="ALWAYS" />
-            <Button maxWidth="Infinity" onAction="#UploadCode" styleClass="action-button" text="Upload Snippet" />
-            <Button maxWidth="Infinity" onAction="#GetCode" styleClass="action-button" text="Sync Code" />
-         </children>
-         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
-         </padding>
-      </VBox>
-
-      <VBox prefHeight="800.0" prefWidth="549.0" spacing="15.0" styleClass="content-area" HBox.hgrow="ALWAYS">
-         <children>
-            <HBox alignment="CENTER_LEFT">
+            <VBox prefHeight="800.0" prefWidth="767.0" spacing="15.0" styleClass="workspace-container">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
                <children>
-                  <Label styleClass="editor-label" text="Editor" textFill="#12eaf2" />
-                  <Region HBox.hgrow="ALWAYS" />
-                  <Button fx:id="ccppcompiler" onAction="#CompileCCpp" styleClass="compile-button" text="Run C/C++" />
+
+                  <HBox alignment="CENTER_LEFT" spacing="15.0">
+                     <children>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Your Room ID:" textFill="#cccccc" />
+                              <TextField fx:id="myRoomID" editable="false" prefWidth="250.0" styleClass="dark-field" />
+                           </children>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#CreateMyOwnRoom" styleClass="modern-button" text="Create Room" />
+                        <Separator opacity="0.2" orientation="VERTICAL" prefHeight="40.0" />
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Join Room ID:" textFill="#cccccc" />
+                              <TextField fx:id="joinRoomBox" prefHeight="36.0" prefWidth="158.0" promptText="Paste Room ID here..." styleClass="dark-field" />
+                           </children>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#JoinRoom" styleClass="modern-button" text="Join Room" />
+                     </children>
+                  </HBox>
+
+
+                  <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="status-banner">
+                     <children>
+                        <Circle fx:id="activeStatus" fill="#ff4c4c" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Text fx:id="CurrentlyJoinedRoom" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Not Connected to Any Room">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="8.0" left="12.0" right="12.0" top="8.0" />
+                     </padding>
+                  </HBox>
+
+
+                  <Label text="Source Code Editor" textFill="#00ffbf">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="codeSnippet" prefHeight="450.0" prefWidth="660.0" promptText="// Write or pull code snippet here..." styleClass="code-area" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Monospaced Regular" size="13.0" />
+                     </font>
+                  </TextArea>
+
+
+                  <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#GetCode" styleClass="secondary-button" text="UPDATE DATA" />
+                        <Button mnemonicParsing="false" onAction="#UploadCode" styleClass="secondary-button" text="UPLOAD CODES" />
+                        <Button fx:id="ccppcompiler" mnemonicParsing="false" onAction="#CompileCCpp" styleClass="compiler-button" text="Compile &amp; Run" />
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
-            <TextArea fx:id="codeSnippet" promptText="// Paste your code here..." styleClass="modern-codebox" stylesheets="@modern-style.css" VBox.vgrow="ALWAYS" />
+            </VBox>
+
+
+            <VBox prefHeight="800.0" prefWidth="300.0" spacing="12.0" styleClass="chat-container">
+               <padding>
+                  <Insets bottom="20.0" left="15.0" right="15.0" top="20.0" />
+               </padding>
+               <children>
+                  <Label text="Chat Box" textFill="#9b51e0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+
+
+                  <TextArea fx:id="chatDisplayBox" editable="false" prefHeight="530.0" prefWidth="270.0" promptText="System: Chat messages will show up here live..." styleClass="chat-display" wrapText="true" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Monospaced Regular" size="12.0" />
+                     </font>
+                  </TextArea>
+
+
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Nickname:" textFill="#aaaaaa">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nicknameField" promptText="Mahbub" styleClass="dark-field" />
+
+                        <Label text="Message Text:" textFill="#aaaaaa">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="chatInputField" onAction="#SendMessage" promptText="Type a message &amp; press Enter..." styleClass="dark-field" />
+                     </children>
+                  </VBox>
+
+
+                  <VBox alignment="BOTTOM_CENTER" VBox.vgrow="NEVER">
+                     <children>
+                        <Button fx:id="clearChatBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClearChatAction" styleClass="danger-button" text="Clear Chat (Admin Only)" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+
          </children>
-         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </padding>
-      </VBox>
+      </HBox>
    </children>
-</HBox>
+</AnchorPane>
